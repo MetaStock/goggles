@@ -1,9 +1,9 @@
 ! name: MetaStock Core Search
-! description: Excludes utility, script, and specific product paths from MetaStock.
+! description: Strictly searches www.metastock.com while excluding specific utility paths.
 ! public: false
 ! author: MetaStock
 
-! --- EXCLUDED PATHS ---
+! --- EXCLUDED PATHS (MetaStock utility pages) ---
 /css/$discard
 /js/$discard
 /api/$discard
@@ -12,5 +12,8 @@
 /rss/$discard
 /products/realtime/eikon$discard
 
-! --- BOOST REMAINING SITE ---
+! --- ALLOW / BOOST METASTOCK ---
 $boost=5,site=www.metastock.com
+
+! --- DISCARD EVERYTHING ELSE ON THE WEB ---
+$discard
