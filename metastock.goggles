@@ -1,19 +1,16 @@
-! Goggle Name: MetaStock Core Content Only
-! Description: Focuses on www.metastock.com, strictly discarding utility and specific product paths.
+! name: MetaStock Core Search
+! description: Excludes utility, script, and specific product paths from MetaStock.
+! public: false
+! author: MetaStock
 
-! --- ALLOW/BOOST THE MAIN SITE ---
-! This rule ensures the domain is indexed and boosted.
-|https://www.metastock.com^$boost=5
+! --- BLOCKED PATHS ---
+$discard,site=www.metastock.com/css*
+$discard,site=www.metastock.com/js*
+$discard,site=www.metastock.com/api*
+$discard,site=www.metastock.com/search*
+$discard,site=www.metastock.com/sitemap.xml
+$discard,site=www.metastock.com/rss*
+$discard,site=www.metastock.com/products/realtime/eikon*
 
-! --- BLOCKED UTILITY PATHS (from image) ---
-! The asterisk (*) is used as a wildcard to block entire sub-directories.
-www.metastock.com/css*$discard
-www.metastock.com/js*$discard
-www.metastock.com/api*$discard
-www.metastock.com/search*$discard
-www.metastock.com/sitemap.xml$discard
-www.metastock.com/rss*$discard
-
-! --- BLOCKED PRODUCT PATH (from user text) ---
-! Confirmed cutoff rule from user request.
-www.metastock.com/products/realtime/eikon*$discard
+! --- BOOST REMAINING SITE ---
+$boost=5,site=www.metastock.com
