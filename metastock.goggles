@@ -3,17 +3,17 @@
 ! public: false
 ! author: MetaStock
 
-! --- EXCLUDED PATHS (MetaStock utility pages) ---
-/css/$discard
-/js/$discard
-/api/$discard
-/search$discard
-/sitemap.xml$discard
-/rss/$discard
-/products/realtime/eikon$discard
+! --- EXCLUDED PATHS ---
+$discard,site=www.metastock.com/css*
+$discard,site=www.metastock.com/js*
+$discard,site=www.metastock.com/api*
+$discard,site=www.metastock.com/search*
+$discard,site=www.metastock.com/sitemap.xml
+$discard,site=www.metastock.com/rss*
+$discard,site=www.metastock.com/products/realtime/eikon*
 
-! --- ALLOW / BOOST METASTOCK ---
+! --- KEEP & BOOST METASTOCK ---
 $boost=5,site=www.metastock.com
 
-! --- DISCARD EVERYTHING ELSE ON THE WEB ---
+! --- CATCH-ALL: DISCARD EVERYTHING ELSE ON THE WEB ---
 $discard
