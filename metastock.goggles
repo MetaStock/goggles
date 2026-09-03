@@ -3,12 +3,14 @@
 ! public: false
 ! author: MetaStock
 
-! --- RULES ---
-$discard,site=www.metastock.com/css*
-$discard,site=www.metastock.com/js*
-$discard,site=www.metastock.com/api*
-$discard,site=www.metastock.com/search*
-$discard,site=www.metastock.com/sitemap.xml
-$discard,site=www.metastock.com/rss*
-$discard,site=www.metastock.com/products/realtime/eikon*
+! --- BLOCKED PATHS ---
+/css/*$discard,domain=www.metastock.com
+/js/*$discard,domain=www.metastock.com
+/api/*$discard,domain=www.metastock.com
+/search*$discard,domain=www.metastock.com
+/sitemap.xml$discard,domain=www.metastock.com
+/rss*$discard,domain=www.metastock.com
+/products/realtime/eikon*$discard,domain=www.metastock.com
+
+! --- BOOST REMAINING SITE ---
 $boost=5,site=www.metastock.com
