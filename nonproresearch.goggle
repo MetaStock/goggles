@@ -1,0 +1,40 @@
+! name: Financial & Regulatory Inclusions Only
+! description: Restricts search results exclusively to specified financial, regulatory, news, and corporate sites.
+! public: false
+! author: Custom
+
+! --- ALLOW / BOOST INCLUDED DOMAINS ---
+$boost=5,site=morningstar.com
+$boost=5,site=spglobal.com
+$boost=5,site=moodys.com
+$boost=5,site=mas.gov.sg
+$boost=5,site=sfc.hk
+$boost=5,site=asic.gov.au
+$boost=5,site=iiroc.ca
+$boost=5,site=fca.org.uk
+$boost=5,site=federalregister.gov
+$boost=5,site=businesswire.com
+$boost=5,site=globenewswire.com
+$boost=5,site=prnewswire.com
+$boost=5,site=ft.com
+$boost=5,site=wsj.com
+$boost=5,site=reuters.com
+$boost=5,site=bloomberg.com
+$boost=5,site=rocketreach.co
+$boost=5,site=zoominfo.com
+$boost=5,site=crunchbase.com
+$boost=5,site=dnb.com
+$boost=5,site=bizapedia.com
+$boost=5,site=opencorporates.com
+$boost=5,site=canada.ca
+$boost=5,site=gov.uk
+$boost=5,site=gov
+$boost=5,site=nasaa.org
+$boost=5,site=cftc.gov
+$boost=5,site=nfa.futures.org
+$boost=5,site=finra.org
+$boost=5,site=sec.gov
+$boost=5,site=linkedin.com
+
+! --- DISCARD ALL OTHER DOMAINS ---
+$discard
